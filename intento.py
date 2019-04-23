@@ -17,7 +17,7 @@ for i in pinList:
 
 
 
-def  hacerTrago (alcohol, bebida, nivel)
+def  hacerTrago (alcohol, bebida, nivel):
     if(nivel==1): #inge
         if(alcohol==1):#pisco
              GPIO.output(5,  GPIO.LOW)
