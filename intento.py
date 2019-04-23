@@ -14,6 +14,9 @@ for i in pinList:
     GPIO.output(i, GPIO.HIGH)
 
 
+
+
+
 def  hacerTrago (alcohol, bebida, nivel)
     if(nivel==1): #inge
         if(alcohol==1):#pisco
@@ -68,3 +71,10 @@ def  hacerTrago (alcohol, bebida, nivel)
              GPIO.output(19, GPIO.HIGH)
 
     return
+
+
+
+
+print('Empieza')
+hacerTrago(1,2,2)
+print('Listo')
