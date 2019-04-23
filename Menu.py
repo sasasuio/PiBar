@@ -10,7 +10,9 @@ import Adafruit_GPIO.SPI as SPI
 	#Librerías Imágenes:
 from PIL import Image
 from PIL import ImageDraw
-from PIL import ImageFont   
+from PIL import ImageFont 
+
+from intento import hacerTrago  
 
 #INICIALIZACIÓN Y VARIABLES DE BOTONES
 
@@ -152,6 +154,9 @@ items_page1 = 2
 items_page2 = 3
 items_page3 = 4
 
+alcohol = 0
+bebida = 0
+nivel = 0
 
 
 #LOOP PRINCIPAL DEL PROGRAMA	
@@ -196,18 +201,22 @@ while True:
 		if(page == 1 and item == 1): #Selección Pisco
 			page = 2
 			item = 1
+			alcohol = 1
 			print('Selección: Pisco')
 		elif(page == 1 and item == 2): #Selección Ron
 			page = 2
 			item = 1
+			alcohol = 2
 			print('Selección: Ron')
 		elif(page == 2 and item == 1): #Selección Blanca
 			page = 3
 			item = 1
+			bebida = 1
 			print('Selección: Blanca')
 		elif(page == 2 and item == 2): #Selección Negra
 			page = 3
 			item = 1
+			bebida = 2
 			print('Selección: Negra')
 		elif(page == 2 and item == 3): #Selección Volver
 			page = 1
@@ -216,14 +225,20 @@ while True:
 		elif(page == 3 and item == 1): #Nivel Ingeniero
 			page = 1
 			item = 2
+			nivel = 1
+			hacerTrago(alcohol,bebida,nivel)
 			print('Nivel Ingeniería Seleccionado')
 		elif(page == 3 and item == 2): #Nivel Medio
 			page = 1
 			item = 2
+			nivel = 2
+			hacerTrago(alcohol,bebida,nivel)
 			print('Nivel Medio Seleccionado')
 		elif(page == 3 and item == 3): #Nivel Bajo
 			page = 1
 			item = 2
+			nivel = 3
+			hacerTrago(alcohol,bebida,nivel)
 			print('Nivel Bajo Seleccionado')
 		elif(page == 3 and item == 4): #Selección Volver 
 			page = 1
