@@ -18,58 +18,65 @@ for i in pinList:
 
 
 def  hacerTrago (alcohol, bebida, nivel):
-    if(nivel==1): #inge
+    t_ing_h = 126
+    t_ing_l = 54
+    t_med_h = 72
+    t_med_l = 108
+    t_sua_h = 36
+    t_sua_l = 144
+
+    if(nivel==1): #ingeniero
         if(alcohol==1):#pisco
              GPIO.output(5,  GPIO.LOW)
-             sleep(7)
+             sleep(t_ing_h)
              GPIO.output(5, GPIO.HIGH)
         if(alcohol==2):#ron
              GPIO.output(6, GPIO.LOW)
-             sleep(7)
+             sleep(t_ing_h)
              GPIO.output(6, GPIO.HIGH)
         if(bebida==1):#blanca
              GPIO.output(13, GPIO.LOW)
-             sleep(3)
+             sleep(t_ing_l)
              GPIO.output(13, GPIO.HIGH)
         if(bebida==2):#negra
              GPIO.output(19, GPIO.LOW)
-             sleep(3)
+             sleep(t_ing_l)
              GPIO.output(19, GPIO.HIGH)
 
     if(nivel==2): #medio
         if(alcohol==1):#pisco
              GPIO.output(5,  GPIO.LOW)
-             sleep(4)
+             sleep(t_med_h)
              GPIO.output(5, GPIO.HIGH)
         if(alcohol==2):#ron
              GPIO.output(6, GPIO.LOW)
-             sleep(4)
+             sleep(t_med_h)
              GPIO.output(6, GPIO.HIGH)
         if(bebida==1):#blanca
              GPIO.output(13, GPIO.LOW)
-             sleep(6)
+             sleep(t_med_l)
              GPIO.output(13, GPIO.HIGH)
         if(bebida==2):#negra
              GPIO.output(19, GPIO.LOW)
-             sleep(6)
+             sleep(t_med_l)
              GPIO.output(19, GPIO.HIGH)
 
     if(nivel==3): #suave
         if(alcohol==1):#pisco
              GPIO.output(5,  GPIO.LOW)
-             sleep(2)
+             sleep(t_sua_h)
              GPIO.output(5, GPIO.HIGH)
         if(alcohol==2):#ron
              GPIO.output(6, GPIO.LOW)
-             sleep(2)
+             sleep(t_sua_h)
              GPIO.output(6, GPIO.HIGH)
         if(bebida==1):#blanca
              GPIO.output(13, GPIO.LOW)
-             sleep(8)
+             sleep(t_sua_l)
              GPIO.output(13, GPIO.HIGH)
         if(bebida==2):#negra
              GPIO.output(19, GPIO.LOW)
-             sleep(8)
+             sleep(t_sua_l)
              GPIO.output(19, GPIO.HIGH)
 
     return
