@@ -18,12 +18,13 @@ for i in pinList:
 
 
 def  hacerTrago (alcohol, bebida, nivel):
-    t_ing_h = 126
-    t_ing_l = 54
-    t_med_h = 72
-    t_med_l = 108
-    t_sua_h = 36
-    t_sua_l = 144
+    #h: alcohol  l:bebida
+    t_ing_h = 30
+    t_ing_l = 140
+    t_med_h = 21
+    t_med_l = 157
+    t_sua_h = 15
+    t_sua_l = 169
 
     if(nivel==1): #ingeniero
         if(alcohol==1):#pisco
