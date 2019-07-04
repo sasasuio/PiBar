@@ -46,7 +46,7 @@ def imprimir_en_pantalla():
     disp.display()
     return
 
-//Nivel Vertical: -1,15,23,31,39
+#Nivel Vertical: -1,15,23,31,39
 
 limpiar_pantalla()
 draw.text((8,-1), 'Seleccione: ', font=font)
