@@ -46,19 +46,89 @@ def imprimir_en_pantalla():
     disp.display()
     return
 
-#Nivel Vertical: -1,15,23,31,39
+def pantalla_bienvenida():
+   draw.text((12,12),'Bienvenido',font=font)
+   draw.text((24,22),'PiBar',font=font)
+   return
+    
+def pantalla_sel_alcohol(item):
+    c = '>'
+    a = [0]*4
+    a[item]=1
+    title_1 = 'Seleccione: '
+    item_1 = 'Shot Tequila'
+    item_2 = 'Teq. Sunrise'
+    item_3 = 'Vod. Sunrise'
+    item_4 = 'Vodka Naran.'
+    draw.text((4,-1), title_1, font=font)
+    draw.text((4,15), a[0]*c+item_1,font = font)
+    draw.text((4,23), a[1]*c+item_2,font = font)
+    draw.text((4,31), a[2]*c+item_3,font = font)
+    draw.text((4,39), a[3]*c+item_4,font = font)
+    return
+    
+def pantalla_sel_nivel(lvl):
+   c = '>'
+   a = [0]*4
+   a[lvl]=1
+   title_1 = 'Nivel: '
+   lvl_1 = 'Suave'
+   lvl_2 = 'Medio'
+   lvl_3 = 'Ingeniería'
+   lvl_4 = 'Volver'
+   draw.text((4,-1), title_1, font=font)
+   draw.text((4,15), a[0]*c+lvl_1,font = font)
+   draw.text((4,23), a[1]*c+lvl_2,font = font)
+   draw.text((4,31), a[2]*c+lvl_3,font = font)   
+   draw.text((4,39), a[3]*c+lvl_4,font = font)   
+   return
+
+def pantalla_preparando():
+   draw.text((5,8),'Preparando...' ,font = font)
+   #~ draw.rectangle((5,30,78,40), outline=0, fill=255)
+   #~ imprimir_en_pantalla()
+   #~ i=5
+   #~ while i<78:
+      #~ draw.rectangle((5,30,i,40), outline=0, fill=0)
+      #~ i += 1
+      #~ imprimir_en_pantalla()
+      #~ sleep(0.05)
+   return
+
+def pantalla_listo():
+   draw.text((12,12),'Listo!',font=font)
+   draw.text((24,22),'Disfruta',font=font)
+   return
+
+   
+
+#Nivel Vertical: -1,15,23,31,39 (Delta 8)
+#Pos X Máx = 83
+#Pos Y Máx = 47
 
 limpiar_pantalla()
-draw.text((4,-1), 'Seleccione: ', font=font)
-draw.text((4,15), 'Shot Tequila',font = font)
-draw.text((4,23), '>Tequila Sunrise',font = font)
-draw.text((4,31), 'Vodka Sunrise',font = font)
-draw.text((4,39), 'Vodka Naranja',font = font)
+pantalla_bienvenida()
 imprimir_en_pantalla()
-sleep(2)
+sleep(1)
+ 
+for i in range(4):
+    limpiar_pantalla()
+    pantalla_sel_alcohol(i)
+    imprimir_en_pantalla()
+    sleep(0.5)
+
+for i in range(4):
+   limpiar_pantalla()
+   pantalla_sel_nivel(i)
+   imprimir_en_pantalla()
+   sleep(0.5)
+    
 limpiar_pantalla()
-draw.text((4,-1), 'Seleccione Nivel:',font = font)
-draw.text((4,15), 'Suave',font = font)
-draw.text((4,23), 'Medio',font = font)
-draw.text((4,31), 'Ingeniería',font = font)
+pantalla_preparando()
 imprimir_en_pantalla()
+sleep(1)
+
+limpiar_pantalla()
+pantalla_listo()
+imprimir_en_pantalla()
+
