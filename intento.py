@@ -19,7 +19,7 @@ for i in pinList:
 
 def  hacerTrago (alcohol, bebida, nivel):
     #h: alcohol  l:bebida
-    t_ing_h = 30
+    t_ing_h = 300
     t_ing_l = 140
     t_med_h = 21
     t_med_l = 157
