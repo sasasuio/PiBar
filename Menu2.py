@@ -147,7 +147,7 @@ def pantalla_listo():
 
 def mostrar_menu(item,page):
 	limpiar_pantalla()
-
+	
 	if(page == 0):
 		pantalla_bienvenida()
 	if(page == 1):
@@ -164,9 +164,9 @@ def mostrar_menu(item,page):
 
 #INICIALIZACIÓN Y VARIABLES DE MENÚ
 
-page = 0
+page = 1
 item = 1
-page_prev = 0
+page_prev = 1
 item_prev = 1
 items_page1 = 4
 items_page2 = 4
@@ -180,6 +180,8 @@ nivel = 0
 
 #LOOP PRINCIPAL DEL PROGRAMA
 
+mostrar_menu(item,0) #Pantalla Bienvenida
+sleep(1)
 mostrar_menu(item,page)
 
 while True:
@@ -225,13 +227,13 @@ while True:
 			alcohol = 1
 			jugo = 1
 			granadina = 1
-		elif(page == 1 and item == 2): #Selección Vodka Sunrise
+		elif(page == 1 and item == 3): #Selección Vodka Sunrise
 			page = 2
 			item = 1
 			alcohol = 2
 			jugo = 1
 			granadina = 1
-		elif(page == 1 and item == 1): #Selección Vodka Naranja
+		elif(page == 1 and item == 4): #Selección Vodka Naranja
 			page = 2
 			item = 1
 			alcohol = 2
@@ -253,7 +255,9 @@ while True:
 			page = 1
 			item = 1
 		elif(page == 3):
-			hacerTrago(alcohol,jugo,granadina,nivel)
+			#hacerTrago(alcohol,jugo,granadina,nivel)
+			page = 4
+			item = 1
 		elif(page == 4):
 			sleep(2)
 			page = 1

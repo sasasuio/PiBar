@@ -13,10 +13,6 @@ for i in pinList:
     GPIO.setup(i, GPIO.OUT) 
     GPIO.output(i, GPIO.HIGH)
 
-
-
-
-
 def  hacerTrago (alcohol, bebida, nivel):
     #h: alcohol  l:bebida
     t_ing_h = 300
