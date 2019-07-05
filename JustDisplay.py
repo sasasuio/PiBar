@@ -92,7 +92,7 @@ def pantalla_preparando():
       #~ i += 1
       #~ imprimir_en_pantalla()
       #~ sleep(0.05)
-   return
+   #~ return
 
 def pantalla_listo():
    draw.text((12,12),'Listo!',font=font)
