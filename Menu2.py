@@ -12,7 +12,7 @@ from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
 
-from intento import hacerTrago
+from Tragos import hacerTrago
 
 #INICIALIZACIÓN Y VARIABLES DE BOTONES
 
@@ -147,7 +147,7 @@ def pantalla_listo():
 
 def mostrar_menu(item,page):
 	limpiar_pantalla()
-	
+
 	if(page == 0):
 		pantalla_bienvenida()
 	if(page == 1):
