@@ -10,7 +10,6 @@ from PIL import ImageDraw
 from PIL import ImageFont
 
 #INICIALIZACIÓN Y VARIABLES DEL DISPLAY
-
 #Puerto SPI
 DC = 23
 RST = 24
@@ -50,7 +49,7 @@ def pantalla_bienvenida():
    draw.text((12,12),'Bienvenido',font=font)
    draw.text((24,22),'PiBar',font=font)
    return
-    
+
 def pantalla_sel_alcohol(item):
     c = '>'
     a = [0]*4
@@ -66,7 +65,7 @@ def pantalla_sel_alcohol(item):
     draw.text((4,31), a[2]*c+item_3,font = font)
     draw.text((4,39), a[3]*c+item_4,font = font)
     return
-    
+
 def pantalla_sel_nivel(lvl):
    c = '>'
    a = [0]*4
@@ -79,8 +78,8 @@ def pantalla_sel_nivel(lvl):
    draw.text((4,-1), title_1, font=font)
    draw.text((4,15), a[0]*c+lvl_1,font = font)
    draw.text((4,23), a[1]*c+lvl_2,font = font)
-   draw.text((4,31), a[2]*c+lvl_3,font = font)   
-   draw.text((4,39), a[3]*c+lvl_4,font = font)   
+   draw.text((4,31), a[2]*c+lvl_3,font = font)
+   draw.text((4,39), a[3]*c+lvl_4,font = font)
    return
 
 def pantalla_preparando():
@@ -100,7 +99,7 @@ def pantalla_listo():
    draw.text((24,22),'Disfruta',font=font)
    return
 
-   
+
 
 #Nivel Vertical: -1,15,23,31,39 (Delta 8)
 #Pos X Máx = 83
@@ -110,7 +109,7 @@ limpiar_pantalla()
 pantalla_bienvenida()
 imprimir_en_pantalla()
 sleep(1)
- 
+
 for i in range(4):
     limpiar_pantalla()
     pantalla_sel_alcohol(i)
@@ -122,7 +121,7 @@ for i in range(4):
    pantalla_sel_nivel(i)
    imprimir_en_pantalla()
    sleep(0.5)
-    
+
 limpiar_pantalla()
 pantalla_preparando()
 imprimir_en_pantalla()
@@ -131,4 +130,3 @@ sleep(1)
 limpiar_pantalla()
 pantalla_listo()
 imprimir_en_pantalla()
-
