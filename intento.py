@@ -9,8 +9,8 @@ pinList = [5, 6, 13, 19]
 
 # loop through pins and set mode and state to 'high'
 
-for i in pinList: 
-    GPIO.setup(i, GPIO.OUT) 
+for i in pinList:
+    GPIO.setup(i, GPIO.OUT)
     GPIO.output(i, GPIO.HIGH)
 
 def  hacerTrago (alcohol, bebida, nivel):

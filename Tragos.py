@@ -9,7 +9,7 @@ for i in pinList:
     GPIO.setup(i, GPIO.OUT)
     GPIO.output(i, GPIO.HIGH)
 
-def hacerTrago(alcohol,jugo,granadina,nivel)
+def hacerTrago(alcohol,jugo,granadina,nivel):
 	#Alcohol: 1 - Tequila / 2 - Vodka
 	#Jugo: 0 - Nada / 1 - Naranja
 	#Granadina: 0 - Nada / 1 - Granadina
